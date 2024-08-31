@@ -7,7 +7,6 @@ import {
 } from "src/constants/blockchain";
 import { Section } from "./layout/sections";
 import { TokenSelector } from "./layout/token-selector";
-import { SubTitle } from "./text/subtitle";
 import { ConnectButton } from "@rainbow-me/rainbowkit";
 import { useAccount, useReadContract } from "wagmi";
 import { abi as erc20PermitAbi } from "src/constants/abi/erc20-permit";

@@ -130,7 +130,7 @@ export const TokenSend = () => {
 
   return (
     <div className="flex flex-col justify-center m-auto gap-5">
-      <ConnectButton />
+      <ConnectButton accountStatus={"address"} />
       <Section>
         {/* <SubTitle className="text-start">Send</SubTitle> */}
         <div className="flex flex-col">

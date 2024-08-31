@@ -19,7 +19,7 @@ export const TokenSelector = ({
   return (
     <Dropdown>
       <DropdownTrigger>
-        <button className="flex items-center justify-center gap-2 text-xl border-2 border-gray-200 px-3 py-1 rounded-full font-medium text-gray-500">
+        <button className="flex items-center justify-center gap-2 md:text-xl border-2 border-gray-200 px-3 py-1 rounded-full font-medium text-gray-500">
           {selected?.symbol}{" "}
           <span>
             <img

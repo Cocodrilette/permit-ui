@@ -12,6 +12,8 @@ import { useAccount, useReadContract } from "wagmi";
 import { abi as erc20PermitAbi } from "src/constants/abi/erc20-permit";
 import { parseBalance } from "src/utils/parse-balance";
 import { isAddress, parseUnits } from "viem";
+import { TextInput } from "./layout/text-input";
+import { Label } from "./text/label";
 
 const REFRESH_INTERVAL = 10000; // 10 seconds
 
@@ -129,9 +131,9 @@ export const TokenSend = () => {
       <Section>
         {/* <SubTitle className="text-start">Send</SubTitle> */}
         <div className="flex flex-col">
-          <label className="text-sm">Balance</label>
+          <Label>Balance</Label>
           <div className="flex items-center justify-between gap-10">
-            <p className="text-2xl font-mono">
+            <p className="text-xl md:text-2xl font-mono">
               {parseBalance(balance, selectedItem?.decimal)}
             </p>
             <TokenSelector
@@ -163,31 +165,5 @@ export const TokenSend = () => {
         </button>
       </Section>
     </div>
-  );
-};
-
-export const TextInput = ({
-  label,
-  value,
-  isValid,
-  onChange,
-}: {
-  label: string;
-  value: string;
-  isValid?: boolean;
-  onChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
-}) => {
-  return (
-    <>
-      <label className="text-sm">{label}</label>
-      <input
-        type="text"
-        value={value}
-        onChange={onChange}
-        className={`text-xl bg-transparent px-4 py-2 md:p-3 outline-none border-2 border-gray-200 transition-all rounded-lg focus:shadow-md focus:border-black font-mono ${
-          isValid && "border-accent"
-        }`}
-      />
-    </>
   );
 };

@@ -2,6 +2,7 @@ export type SupportedToken = {
   name: string;
   symbol: string;
   address: string;
+  decimal: number;
   icon?: string;
 };
 
@@ -9,14 +10,16 @@ export const supportedTokens: SupportedToken[] = [
   {
     name: "TokenA",
     symbol: "TKNA",
-    address: "0xe7f1725e7734ce288f8367e1bb143e90bb3f0512",
-    icon: "	https://s2.coinmarketcap.com/static/img/coins/64x64/1.png",
+    address: "0x5FbDB2315678afecb367f032d93F642f64180aa3",
+    icon: "https://s2.coinmarketcap.com/static/img/coins/64x64/1.png",
+    decimal: 18,
   },
   {
     name: "TokenB",
     symbol: "TOKNB",
-    address: "0x5fbdb2315678afecb367f032d93f642f64180aa3",
+    address: "0xe7f1725E7734CE288F8367e1Bb143E90bb3F0512",
     icon: "https://s2.coinmarketcap.com/static/img/coins/64x64/52.png",
+    decimal: 6,
   },
 ];
 

@@ -57,7 +57,6 @@ export const TokenSend = () => {
   useEffect(() => {
     if (selectedItem) {
       refetch();
-      console.log(balance, error, isLoading);
     }
   }, [selectedItem]);
 
@@ -72,8 +71,6 @@ export const TokenSend = () => {
   }, [selectedItem, refetch]);
 
   function handleAddressChange(event: React.ChangeEvent<HTMLInputElement>) {
-    console.log(event.target.value);
-
     if (isAddress(event.target.value)) {
       setAddressInput({
         ...addressInput,
@@ -96,9 +93,7 @@ export const TokenSend = () => {
     if (isNaN(Number(event.target.value))) return;
 
     const value = parseUnits(event.target.value, selectedItem?.decimal ?? 18);
-    console.log({ value, balance });
     if (balance && value > (balance as bigint)) {
-      console.log("Insufficient balance");
       setAmountInput({
         ...amountInput,
         value: event.target.value,
@@ -129,8 +124,8 @@ export const TokenSend = () => {
   }
 
   return (
-    <div className="flex flex-col justify-center m-auto gap-5">
-      <ConnectButton accountStatus={"address"} />
+    <div className="flex flex-col justify-center items-center m-auto gap-5">
+      <ConnectButton accountStatus={"address"} chainStatus={"icon"} />
       <Section>
         {/* <SubTitle className="text-start">Send</SubTitle> */}
         <div className="flex flex-col">

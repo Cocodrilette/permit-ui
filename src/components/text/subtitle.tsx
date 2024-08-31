@@ -6,7 +6,7 @@ export const SubTitle = ({
   className: string;
 }) => {
   return (
-    <h2 className={`text-2xl md:text-4xl font-semibold mb-5 ${className}`}>
+    <h2 className={`text-2xl md:text-4xl font-semibold mb-2 ${className}`}>
       {children}
     </h2>
   );

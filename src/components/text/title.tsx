@@ -6,6 +6,6 @@ export const Title = ({
   className?: string;
 }) => {
   return (
-    <h1 className={`text-6xl font-semibold mb-10 ${className}`}>{children}</h1>
+    <h1 className={`text-6xl font-semibold mb-7 ${className}`}>{children}</h1>
   );
 };
